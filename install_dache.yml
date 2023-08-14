@@ -1,0 +1,24 @@
+---
+- name: dCache Frontend
+  hosts: master
+  #hosts: localhost
+  #gather_facts: no
+  become: true
+  roles:
+    - role: geonmo.dcache
+      vars:
+        type: "frontend"
+        dcache_version: 8.2.27
+        install_certs: false
+- name: dCache Backend
+  hosts: disk
+  #hosts: localhost
+  #gather_facts: no
+  become: true
+  roles:
+    - role: geonmo.dcache
+      vars:
+        type: "backend"
+        dcache_version: 8.2.27
+        install_certs: false
+

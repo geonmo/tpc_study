@@ -1,0 +1,8 @@
+grid_vos:
+  - cms
+grid_site_name: "KR-DUMMY-Tier3"
+grid_host_certificate: {}
+grid_umd_repo_exclude:
+  - dpm-*
+  - lfc-*
+  - lcgdm-*
